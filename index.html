@@ -1,13 +1,73 @@
 ---
 layout: default
-title: Your New Jekyll Site
+title: Wiggles and Cupcakes
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+<div class="intro-header">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>.Welcome.</h1>
+                        <h3>Take a seat, stay a while...</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <img src="/img/cir11.jpg" class="circle img-circle">
+                            </li>
+                            <li>
+                                <img src="/img/cir2.jpg" class="circle img-circle">
+                            </li>
+                            <li>
+                                <img src="/img/cir33.jpg" class="circle img-circle">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+{% for post in site.posts %}
+	<div class="content-section-{% cycle 'a', 'b' %}">
+		<div class="container">
+    		<div class="row">
+    			<div class="col-lg-5 col-sm-6 {% cycle '', 'col-lg-offset-1 col-sm-push-6' %}">
+        			<hr class="section-heading-spacer">
+        			<div class="clearfix"></div>
+        			<h2 class="section-heading"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        			
+        			<p class="text-muted">{{ post.date | date_to_string }} </p> 
+        			<p class="lead">{{ post.excerpt }}</p>
+
+        			<a href="{{ post.url }}">Read More... &raquo;</a>
+        			<br>
+        			<a href="{{ post.url }}#disqus_thread"> Flying Monkeys and Hand Grenades! </a>
+    			</div>
+        		<div class="col-lg-5 col-sm-6 {% cycle 'col-lg-offset-2', 'col-sm-pull-6' %}">
+                	<img class="img-responsive" src="/img/{{ post.thumbnail }}.jpg" alt="">
+            	</div>
+    		</div><!-- /.row -->
+    	</div><!-- /.container -->
+	</div><!-- /.content-section-? -->
+{% endfor %}
+
+
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'wigglesandcupcakes'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>

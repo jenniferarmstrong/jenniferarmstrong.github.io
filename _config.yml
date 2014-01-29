@@ -1,3 +1,6 @@
-name: Your New Jekyll Site
+name: Wiggles and Cupcakes
 markdown: redcarpet
 pygments: true
+paginate: 3
+permalink: pretty
+status: In Development 
