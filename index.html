@@ -34,7 +34,7 @@ title: Wiggles and Cupcakes
     </div>
     <!-- /.intro-header -->
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 	<div class="content-section-{% cycle 'a', 'b' %}">
 		<div class="container">
     		<div class="row">
@@ -46,19 +46,56 @@ title: Wiggles and Cupcakes
         			<p class="text-muted">{{ post.date | date_to_string }} </p> 
         			<p class="lead">{{ post.excerpt }}</p>
 
-        			<a href="{{ post.url }}">Read More... &raquo;</a>
+        			<a href="{{ post.url }}">Read More &raquo;</a>
         			<br>
         			<a href="{{ post.url }}#disqus_thread"> Flying Monkeys and Hand Grenades! </a>
     			</div>
-                {% if post.thumbnail %}
+                
         		<div class="col-lg-5 col-sm-6 {% cycle 'col-lg-offset-2', 'col-sm-pull-6' %}">
-                	<img class="img-responsive" src="/img/{{ post.thumbnail }}.jpg" alt="">
-            	</div>
-                {% endif %}
+                	{% if post.thumbnail %}
+                    <img class="img-responsive" src="/img/{{ post.thumbnail }}.jpg" alt="">
+            	   {% endif %}
+                </div>
     		</div><!-- /.row -->
     	</div><!-- /.container -->
 	</div><!-- /.content-section-? -->
 {% endfor %}
+
+{% if paginator.total_pages > 1 %}
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <ul class="pagination">
+                {% if paginator.previous_page %}
+                <li class="previous">
+                {% else %}
+                <li class="disabled">
+                {% endif %}
+                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>
+                </li>
+
+                {% for page_num in (1..paginator.total_pages) %}
+                    {% if page_num == paginator.page %}
+                    <li class="active disabled"><a href="javascript:;" onclick="return false;">{{ page_num }}</a></li>
+                    {% elsif page_num == 1 %}
+                    <li><a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page_num }}</a></li>
+                    {% else %}
+                    <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page_num }}">{{ page_num}}</a></li>
+                    {% endif %}
+                {% endfor %}
+                
+                {% if paginator.next_page %}
+                <li class="next">
+                {% else %}
+                <li class="diabled">
+                {% endif %}
+                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="fui-arrow-right">&raquo;</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endif %}
+
+
 
 
   <script type="text/javascript">
