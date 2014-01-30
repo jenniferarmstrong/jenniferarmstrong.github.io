@@ -34,6 +34,7 @@ title: Wiggles and Cupcakes
     </div>
     <!-- /.intro-header -->
 
+<div id="content_start"></div>
 {% for post in paginator.posts %}
 	<div class="content-section-{% cycle 'a', 'b' %}">
 		<div class="container">
@@ -53,7 +54,7 @@ title: Wiggles and Cupcakes
                 
         		<div class="col-lg-5 col-sm-6 {% cycle 'col-lg-offset-2', 'col-sm-pull-6' %}">
                 	{% if post.thumbnail %}
-                    <img class="img-responsive" src="/img/{{ post.thumbnail }}.jpg" alt="">
+                    <img class="img-responsive img-rounded thumb" src="/img/{{ post.thumbnail }}.jpg" alt="">
             	   {% endif %}
                 </div>
     		</div><!-- /.row -->
@@ -70,16 +71,16 @@ title: Wiggles and Cupcakes
                 {% else %}
                 <li class="disabled">
                 {% endif %}
-                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>
+                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}#content_start">&laquo;</a>
                 </li>
 
                 {% for page_num in (1..paginator.total_pages) %}
                     {% if page_num == paginator.page %}
                     <li class="active disabled"><a href="javascript:;" onclick="return false;">{{ page_num }}</a></li>
                     {% elsif page_num == 1 %}
-                    <li><a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page_num }}</a></li>
+                    <li><a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}#content_start">{{ page_num }}</a></li>
                     {% else %}
-                    <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page_num }}">{{ page_num}}</a></li>
+                    <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page_num }}#content_start">{{ page_num}}</a></li>
                     {% endif %}
                 {% endfor %}
                 
@@ -88,7 +89,7 @@ title: Wiggles and Cupcakes
                 {% else %}
                 <li class="diabled">
                 {% endif %}
-                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="fui-arrow-right">&raquo;</a>
+                    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}#content_start" class="fui-arrow-right">&raquo;</a>
                 </li>
             </ul>
         </div>
