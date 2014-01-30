@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-
+ 
 <br/><br/>
 <div class="container">
-	<h1>{{ page.title }}</h1>
+    <h1>{{ page.title }}</h1>
     <!-- AddThis Button BEGIN -->
 <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
 <a class="addthis_button_preferred_1"></a>
@@ -17,18 +17,35 @@ layout: default
 <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52e87f0b38795be8"></script>
 <!-- AddThis Button END -->
-	<p class="text-muted">{{ page.date | date_to_string }}</p>
-	<div class="text-left">
-	{{ content }}
-	</div>
+    <p class="text-muted">{{ page.date | date_to_string }}</p>
+ 
+    <div class="container">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="text-left">
+                   {{ content }}
+               </div>
+            </div>
+            <div class="row">
+               <div id="disqus_thread"></div>
+            </div>
+        </div>
+ 
+        <div class="col-md-5 col-md-offset-1">
+            {% if page.thumbnail %}
+            <div class="row">
+                <img src="/img/{{ page.thumbnail }}.jpg" alt="" class="img-responsive img-rounded thumb" />
+            </div>
+            {% endif %}
+        </div>
+    </div>
 
-	<div id="disqus_thread"></div>
-</div>
-
+    <br><br>
+ 
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'wigglesandcupcakes'; // required: replace example with your forum shortname
-
+ 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
