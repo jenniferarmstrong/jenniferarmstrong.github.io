@@ -50,9 +50,11 @@ title: Wiggles and Cupcakes
         			<br>
         			<a href="{{ post.url }}#disqus_thread"> Flying Monkeys and Hand Grenades! </a>
     			</div>
+                {% if post.thumbnail %}
         		<div class="col-lg-5 col-sm-6 {% cycle 'col-lg-offset-2', 'col-sm-pull-6' %}">
                 	<img class="img-responsive" src="/img/{{ post.thumbnail }}.jpg" alt="">
             	</div>
+                {% endif %}
     		</div><!-- /.row -->
     	</div><!-- /.container -->
 	</div><!-- /.content-section-? -->
