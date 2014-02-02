@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "First Time Sledding"
+date:   2014-02-01 19:15:00
+categories: blog
+thumbnail: post6 
+---
+
+Well... this week has been a crazy busy week. One that seemed to drag on, with not enough rest! Even in the chaos, we still managed to find time for fun. Today's adventure consisted of the usual last minute shopping; you know, the shopping you do, after you've already bought a million things, and then realize, "Hey! we still need _____!" Yea, that. After that was over, we decided to come home, and get bundled up! Its a love/hate relationship with me doing such, but since Elijah is my little man, and has never gone sledding, I suffered through it. If you're not sure what I'm referring to, it's the _geting a million articles of clothing, struggling to fit them all on top of one another, making sure my child can still breath and move_ aspect of "sledding preparation"....
+
+
+ He was a champ, with his multiple layers, and of course could barely move. Then, off to find a hillside we went! We found the perfect place at a nearby park where we like to go, and of course it was already crammed with bundled children giggling up and down it. We got unloaded, and Elijah was simply happy to just be walking in snow. (I love that he loves the little things). We drag him to the hill, not literally, but pulling him on the sled behind us, and arrive at the giant hill! At first Elijah was hesistant, (especially since the last experience he had, the first trip down a hill he got white washed by daddy). This time, it was mommy and him! And away we went!! I wrapped my arms around my boy, as he clenched his little gloved hands around mine, giggling away. We reached the bottom of the hill, and he immediately was sad. I tried comforting him, of course, by logically trying to explain to my 19mo old that we walk back up to the top and go again, but that wasn't going to work. So daddy had to walk all the way down the hill and carry him back up! We did this until daddy got annoyed with all the little children there that quickly flooded the area we were in. So we decided we'd had enough sledding for one day, but couldnt end that moment on a bad note. So we decided to roll around in the snow, and take pictures! We then came home, relaxed, and warmed up. Shortly thereafter, Elijah and I decdied to cuddle together and watch "The Lion King" under the warm blankies. I'm not sure at what point we fell asleep, but Dan informed me that almost by the end of the movie, he looked over at us and noticed we were both asleep. We were tuckered. Of course, we had supper and concluded our sled day! 
+
+ ![pic](/img/sledding.jpg)
