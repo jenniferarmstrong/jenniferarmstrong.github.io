@@ -3,4 +3,3 @@ markdown: redcarpet
 pygments: true
 paginate: 3
 permalink: pretty
-status: In Development 
